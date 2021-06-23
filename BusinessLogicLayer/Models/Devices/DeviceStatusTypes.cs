@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Devices
 {
-    class DeviceDetails
+    class DeviceStatusTypes
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int RestId { get; set; }
-        public int BranchId { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
-
     }
 }
