@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Devices\" />
     <Folder Include="Models\Notifications\" />
     <Folder Include="Models\Oreders\" />
   </ItemGroup>
