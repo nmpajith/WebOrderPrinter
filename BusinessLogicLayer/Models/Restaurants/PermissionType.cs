@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Restaurants
 {
-    public class Restaurants
+    public class PermissionType
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime DateCreated { get; set; }
-        public DateTime DateModified { get; set; }
     }
 }
