@@ -5,7 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\Oreders\" />
+    <Compile Remove="Models\Oreders\**" />
+    <EmbeddedResource Remove="Models\Oreders\**" />
+    <None Remove="Models\Oreders\**" />
   </ItemGroup>
 
 </Project>
