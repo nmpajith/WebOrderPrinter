@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer.Models.Orders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace BusinessLogicLayer.Models.Restaurants
         public string Name { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public IList<Branch> Products { get; set; } = new List<Branch>();
+        public IList<Branch> Branches { get; set; } = new List<Branch>();
+        public IList<Contact> Contacts { get; set; }
+        public IList<OrderDetail> OrderDetails { get; set; }
     }
 }
