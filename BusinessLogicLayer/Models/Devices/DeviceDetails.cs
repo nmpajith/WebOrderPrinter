@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Devices
 {
+    //Test Comment
     class DeviceDetails
     {
         public int Id { get; set; }
