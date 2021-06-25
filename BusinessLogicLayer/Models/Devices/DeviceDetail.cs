@@ -16,6 +16,7 @@ namespace BusinessLogicLayer.Models.Devices
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
+        public DeviceStatus DeviceStatus { get; set; }
         public IList <Notification> Notifications { get; set; }
     }
 }

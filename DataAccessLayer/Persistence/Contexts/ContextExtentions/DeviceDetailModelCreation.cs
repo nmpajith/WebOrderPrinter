@@ -20,6 +20,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateCreated).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateModified).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Branch).IsRequired();
+            builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DeviceStatus).IsRequired();
+            builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Notifications).IsRequired();
 
         }
 
