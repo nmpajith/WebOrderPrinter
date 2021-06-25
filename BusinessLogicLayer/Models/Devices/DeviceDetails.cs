@@ -12,13 +12,12 @@ namespace BusinessLogicLayer.Models.Devices
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public int RestId { get; set; }
         public int BranchId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
 
         public Branch Branch { get; set; }
-        public Restaurant Restaurant { get; set; }
+
 
     }
 }
