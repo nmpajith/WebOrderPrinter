@@ -34,8 +34,9 @@ namespace DataAccessLayer.Persistence.Contexts
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            builder.CreateRestaurants();
-            builder.SeedRestaurants();
+            builder.CreateRestaurant();
+            builder.SeedRestaurant();
+            builder.SeedDeviceStatusType();
         }
     }
 }
