@@ -40,10 +40,12 @@ namespace DataAccessLayer.Persistence.Contexts
             builder.SeedBranches();
             builder.CreateAddresses();
             builder.SeedAddresses();            
-            builder.CreateDeviceStatus();
-            builder.SeedDeviceStatusType();
+            builder.CreateDeviceStatusTypes();
+            builder.SeedDeviceStatusTypes();
+            builder.CreateDeviceStatuses();
+            builder.SeedDeviceStatuses();
+            builder.CreateDeviceDetails();
             builder.SeedDeviceDetails();
-            builder.SeedDeviceStatus();
         }
     }
 }

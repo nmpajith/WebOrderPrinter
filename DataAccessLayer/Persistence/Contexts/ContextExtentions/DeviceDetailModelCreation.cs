@@ -10,9 +10,9 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
 {
     public static class DeviceDetailModelCreation
     {
-        public static void CreateDeviceStatus(this ModelBuilder builder)
+        public static void CreateDeviceDetails(this ModelBuilder builder)
         {
-            builder.Entity<DeviceDetail>().ToTable("DeviceStatuses");
+            builder.Entity<DeviceDetail>().ToTable("DeviceDetails");
             builder.Entity<DeviceDetail>().HasKey(devdetail => devdetail.Id);
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Name).IsRequired().HasMaxLength(255);
@@ -20,7 +20,6 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateCreated).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateModified).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Branch).IsRequired();
-            builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Restaurant).IsRequired();
 
         }
 
