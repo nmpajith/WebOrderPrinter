@@ -2,6 +2,7 @@
 using BusinessLogicLayer.Models.Notifications;
 using BusinessLogicLayer.Models.Orders;
 using BusinessLogicLayer.Models.Restaurants;
+using DataAccessLayer.Persistence.Contexts.ContextExtentions;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -32,8 +33,9 @@ namespace DataAccessLayer.Persistence.Contexts
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            base.OnModelCreating(builder);           
-
+            base.OnModelCreating(builder);
+            builder.CreateRestaurant();
+            builder.SeedRestaurant();
         }
     }
 }

@@ -12,7 +12,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
     {
         public static void CreateRestaurant(this ModelBuilder builder)
         {
-            builder.Entity<Restaurant>().ToTable("Categories");
+            builder.Entity<Restaurant>().ToTable("Restaurants");
             builder.Entity<Restaurant>().HasKey(rest => rest.Id);
             builder.Entity<Restaurant>().Property(rest => rest.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Restaurant>().Property(rest => rest.Name).IsRequired().HasMaxLength(255);
@@ -20,6 +20,15 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<Restaurant>().Property(rest => rest.DateModified).IsRequired();
             builder.Entity<Restaurant>().HasMany(rest => rest.Branches).WithOne(branch => branch.Restaurant)
                 .HasForeignKey(branch => branch.RestaurantId);
+        }
+
+        public static void SeedRestaurant(this ModelBuilder builder)
+        {
+            builder.Entity<Restaurant>().HasData
+            (
+                new Restaurant { Id = 100, Name = "The Chill Restaurant", DateCreated= DateTime.Parse("20210516"), DateModified=DateTime.Parse("20210516") }, 
+                new Restaurant { Id = 101, Name = "Trimo Chinese Restaurant", DateCreated = DateTime.Parse("20210616"), DateModified = DateTime.Parse("20210616") }
+            );
         }
     }
 }
