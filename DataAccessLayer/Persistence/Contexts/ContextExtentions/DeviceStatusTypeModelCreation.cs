@@ -13,9 +13,9 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
         public static void CreateDeviceStatus(this ModelBuilder builder)
         {
             builder.Entity<DeviceStatusType>().ToTable("DeviceStatusTypes");
-            builder.Entity<DeviceStatusType>().HasKey(devstatus => devstatus.Id);
-            builder.Entity<DeviceStatusType>().Property(devstatus => devstatus.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<DeviceStatusType>().Property(devstatus => devstatus.Name).IsRequired().HasMaxLength(255);
+            builder.Entity<DeviceStatusType>().HasKey(devstatustype => devstatustype.Id);
+            builder.Entity<DeviceStatusType>().Property(devstatustype => devstatustype.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<DeviceStatusType>().Property(devstatustype => devstatustype.Name).IsRequired().HasMaxLength(255);
         }
 
         public static void SeedDeviceStatusType(this ModelBuilder builder)
