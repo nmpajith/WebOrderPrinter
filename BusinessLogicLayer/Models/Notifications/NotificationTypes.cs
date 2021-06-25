@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Notifications
 {
-    class NotificationTypes
+    public class NotificationType
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public string Message { get; set; }
     }
 }
