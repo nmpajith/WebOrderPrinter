@@ -10,7 +10,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
 {
     public static class RestaurantModelCreation
     {
-        public static void CreateRestaurant(this ModelBuilder builder)
+        public static void CreateRestaurants(this ModelBuilder builder)
         {
             builder.Entity<Restaurant>().ToTable("Restaurants");
             builder.Entity<Restaurant>().HasKey(rest => rest.Id);
@@ -22,7 +22,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 .HasForeignKey(branch => branch.RestaurantId);
         }
 
-        public static void SeedRestaurant(this ModelBuilder builder)
+        public static void SeedRestaurants(this ModelBuilder builder)
         {
             builder.Entity<Restaurant>().HasData
             (

@@ -1,0 +1,36 @@
+﻿using BusinessLogicLayer.Models.Restaurants;
+using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
+{
+    public static class BranchModelCreation
+    {
+        public static void CreateBranchs(this ModelBuilder builder)
+        {
+            builder.Entity<Branch>().ToTable("Branches");
+            builder.Entity<Branch>().HasKey(branch => branch.Id);
+            builder.Entity<Branch>().Property(branch => branch.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Branch>().Property(branch => branch.Name).IsRequired().HasMaxLength(255);
+            builder.Entity<Branch>().Property(branch => branch.DateCreated).IsRequired();
+            builder.Entity<Branch>().Property(branch => branch.DateModified).IsRequired();
+            builder.Entity<Branch>().HasMany(branch => branch.Contacts).WithOne(contact => contact.Branch)
+                .HasForeignKey(contact => contact.BranchId);
+            builder.Entity<Branch>().HasMany(branch => branch.Notifications).WithOne(notification => notification.Branch)
+                .HasForeignKey(notification => notification.BranchId);
+        }
+
+        public static void SeedBranches(this ModelBuilder builder)
+        {
+            builder.Entity<Restaurant>().HasData
+            (
+                new Restaurant { Id = 100, Name = "The Chill Restaurant", DateCreated = DateTime.Parse("20210516"), DateModified = DateTime.Parse("20210516") },
+                new Restaurant { Id = 101, Name = "Trimo Chinese Restaurant", DateCreated = DateTime.Parse("20210616"), DateModified = DateTime.Parse("20210616") }
+            );
+        }
+    }
+}
