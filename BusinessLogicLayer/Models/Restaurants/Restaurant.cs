@@ -14,7 +14,6 @@ namespace BusinessLogicLayer.Models.Restaurants
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public IList<Branch> Branches { get; set; } = new List<Branch>();
-        public IList<Contact> Contacts { get; set; }
-        public Address Address { get; set; }
+        public IList<Contact> Contacts { get; set; } = new List<Contact>();
     }
 }

@@ -9,7 +9,6 @@ namespace BusinessLogicLayer.Models.Restaurants
     public class Address
     {
         public int Id { get; set; }
-        public int RestaurentID { get; set; }
         public int BranchId { get; set; }
         public string Address1 { get; set; }
         public string Address2 { get; set; }
@@ -19,7 +18,6 @@ namespace BusinessLogicLayer.Models.Restaurants
         public string PhoneNumber { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public Restaurant Restaurant { get; set; }
         public Branch Branch { get; set; }
     }
 }

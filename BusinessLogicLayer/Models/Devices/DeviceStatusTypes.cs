@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Devices
 {
-    class DeviceStatusTypes
+    public class DeviceStatusTypes
     {
         public int Id { get; set; }
         public string Name { get; set; }

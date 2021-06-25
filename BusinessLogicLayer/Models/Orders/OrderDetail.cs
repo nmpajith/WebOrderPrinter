@@ -16,5 +16,6 @@ namespace BusinessLogicLayer.Models.Orders
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
+        public OrderStatus OrderStatus { get; set; }
     }
 }

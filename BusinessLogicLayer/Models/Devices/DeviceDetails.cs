@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLogicLayer.Models.Restaurants;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.Models.Devices
 {
-    class DeviceDetails
+    //Test Comment
+    public class DeviceDetails
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -14,6 +16,9 @@ namespace BusinessLogicLayer.Models.Devices
         public int BranchId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
+
+        public Branch Branch { get; set; }
+        public Restaurant Restaurant { get; set; }
 
     }
 }
