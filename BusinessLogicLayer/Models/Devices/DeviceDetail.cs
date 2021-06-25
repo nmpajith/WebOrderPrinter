@@ -1,5 +1,6 @@
 ﻿using BusinessLogicLayer.Models.Notifications;
 using BusinessLogicLayer.Models.Restaurants;
+using BusinessLogicLayer.Models.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,9 @@ namespace BusinessLogicLayer.Models.Devices
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
-        IList<Notification> Notifications { get; set; }
+        public Restaurant Restaurant { get; set; }
+
+        public IList <Notifications.Notification> Notifications { get; set; }
+
     }
 }
