@@ -1,4 +1,7 @@
-﻿using BusinessLogicLayer.Models.Restaurants;
+﻿using BusinessLogicLayer.Models.Devices;
+using BusinessLogicLayer.Models.Notifications;
+using BusinessLogicLayer.Models.Orders;
+using BusinessLogicLayer.Models.Restaurants;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,10 +13,22 @@ namespace DataAccessLayer.Persistence.Contexts
 {
     public class WebOrderPrinterDbContext : DbContext
     {
-        public DbSet<Restaurant> Categories { get; set; }
-        public DbSet<Branch> Products { get; set; }
+        public DbSet<Restaurant> Restaurants { get; set; }
+        public DbSet<Branch> Branches { get; set; }
+        public DbSet<PermissionType> PermissionTypes { get; set; }
+        public DbSet<Permission> Permissions { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
+        public DbSet<Address> Addresses { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
+        public DbSet<OrderStatus> OrderStatuses { get; set; }
+        public DbSet<OrderStatusType> OrderStatusTypes { get; set; }
+        public DbSet<Notification> Notifications { get; set; }
+        public DbSet<NotificationType> NotificationTypes { get; set; }
+        public DbSet<DeviceDetail> DeviceDetails { get; set; }
+        public DbSet<DeviceStatus> DeviceStatuses { get; set; }
+        public DbSet<DeviceStatusType> DeviceStatusTypes { get; set; }
 
-        public WebOrderPrinterDbContext() : base() { }
+        public WebOrderPrinterDbContext(DbContextOptions<WebOrderPrinterDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
