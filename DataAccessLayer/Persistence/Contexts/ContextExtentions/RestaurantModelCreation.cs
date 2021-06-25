@@ -26,7 +26,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
         {
             builder.Entity<Restaurant>().HasData
             (
-                new Restaurant { Id = 100, Name = "The Chill Restaurant", DateCreated= DateTime.Parse("20210516"), DateModified=DateTime.Parse("20210516") }, 
+                new Restaurant { Id = 100, Name = "The Chill Restaurant", DateCreated = DateTime.Parse("20210516"), DateModified = DateTime.Parse("20210516") },
                 new Restaurant { Id = 101, Name = "Trimo Chinese Restaurant", DateCreated = DateTime.Parse("20210616"), DateModified = DateTime.Parse("20210616") }
             );
         }
