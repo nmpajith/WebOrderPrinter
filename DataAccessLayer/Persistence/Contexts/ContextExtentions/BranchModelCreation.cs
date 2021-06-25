@@ -22,6 +22,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 .HasForeignKey(contact => contact.BranchId);
             builder.Entity<Branch>().HasMany(branch => branch.Notifications).WithOne(notification => notification.Branch)
                 .HasForeignKey(notification => notification.BranchId);
+            builder.Entity<Branch>().HasMany(branch => branch.DeviceDetails).WithOne(device => device.Branch)
+                .HasForeignKey(device => device.BranchId);
             builder.Entity<Branch>().HasOne<Address>(branch => branch.Address).WithOne(ad => ad.Branch)
                 .HasForeignKey<Address>(ad => ad.BranchId);
         }
