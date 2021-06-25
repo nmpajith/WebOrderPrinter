@@ -11,12 +11,10 @@ namespace BusinessLogicLayer.Models.Orders
     {
         public int Id { get; set; }
         public string OrderId { get; set; }
-        public int RestaurantId { get; set; }
         public int BranchId { get; set; }
         public string Order { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public Restaurant Restaurant { get; set; }
         public Branch Branch { get; set; }
     }
 }

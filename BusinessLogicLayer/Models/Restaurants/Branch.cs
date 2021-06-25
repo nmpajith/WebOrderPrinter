@@ -14,5 +14,6 @@ namespace BusinessLogicLayer.Models.Restaurants
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Restaurant Restaurant { get; set; }
+        public Address Address { get; set; }
     }
 }
