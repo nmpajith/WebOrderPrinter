@@ -10,7 +10,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
 {
     public static class BranchModelCreation
     {
-        public static void CreateBranchs(this ModelBuilder builder)
+        public static void CreateBranches(this ModelBuilder builder)
         {
             builder.Entity<Branch>().ToTable("Branches");
             builder.Entity<Branch>().HasKey(branch => branch.Id);
@@ -22,14 +22,30 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 .HasForeignKey(contact => contact.BranchId);
             builder.Entity<Branch>().HasMany(branch => branch.Notifications).WithOne(notification => notification.Branch)
                 .HasForeignKey(notification => notification.BranchId);
+            builder.Entity<Branch>().HasOne<Address>(branch => branch.Address).WithOne(ad => ad.Branch)
+                .HasForeignKey<Address>(ad => ad.BranchId);
         }
 
         public static void SeedBranches(this ModelBuilder builder)
         {
-            builder.Entity<Restaurant>().HasData
+            builder.Entity<Branch>().HasData
             (
-                new Restaurant { Id = 100, Name = "The Chill Restaurant", DateCreated = DateTime.Parse("20210516"), DateModified = DateTime.Parse("20210516") },
-                new Restaurant { Id = 101, Name = "Trimo Chinese Restaurant", DateCreated = DateTime.Parse("20210616"), DateModified = DateTime.Parse("20210616") }
+                new Branch
+                {
+                    Id = 100,
+                    Name = "The Chill Restaurant",
+                    DateCreated = DateTime.Parse("20210516"),
+                    DateModified = DateTime.Parse("20210516"),
+                    RestaurantId = 100
+                },
+                new Branch
+                {
+                    Id = 101,
+                    Name = "Trimo Chinese Restaurant",
+                    DateCreated = DateTime.Parse("20210616"),
+                    DateModified = DateTime.Parse("20210616"),
+                    RestaurantId = 101
+                }
             );
         }
     }

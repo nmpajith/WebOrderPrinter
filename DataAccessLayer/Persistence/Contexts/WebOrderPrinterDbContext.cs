@@ -36,6 +36,11 @@ namespace DataAccessLayer.Persistence.Contexts
             base.OnModelCreating(builder);
             builder.CreateRestaurants();
             builder.SeedRestaurants();
+            builder.CreateBranches();
+            builder.SeedBranches();
+            builder.CreateAddresses();
+            builder.SeedAddresses();            
+            builder.CreateDeviceStatus();
             builder.SeedDeviceStatusType();
         }
     }
