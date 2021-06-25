@@ -13,11 +13,7 @@ namespace BusinessLogicLayer.Models.Devices
         public int DeviceDetailTypeId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-
-        public DeviceDetails DeviceDetails { get; set; }
-        public DeviceStatusTypes DeviceStatusTypes { get; set; }
-
-
-
+        public DeviceDetail DeviceDetails { get; set; }
+        public DeviceStatusType DeviceStatusTypes { get; set; }
     }
 }
