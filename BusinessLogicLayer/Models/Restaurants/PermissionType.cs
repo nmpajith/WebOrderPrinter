@@ -9,6 +9,7 @@ namespace BusinessLogicLayer.Models.Restaurants
     public class PermissionType
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public EPermissionTypeNames PermissionTypeName { get; set; }
+        public Permission Permission { get; set; }
     }
 }

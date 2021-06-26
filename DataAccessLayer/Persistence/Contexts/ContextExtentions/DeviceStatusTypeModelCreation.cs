@@ -15,15 +15,26 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceStatusType>().ToTable("DeviceStatusTypes");
             builder.Entity<DeviceStatusType>().HasKey(devstatustype => devstatustype.Id);
             builder.Entity<DeviceStatusType>().Property(devstatustype => devstatustype.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<DeviceStatusType>().Property(devstatustype => devstatustype.Name).IsRequired().HasMaxLength(255);
+            builder.Entity<DeviceStatusType>().Property(devstatustype => devstatustype.DeviceStatusTypeName).HasConversion<string>().HasColumnName("DeviceStatusType")
+                .IsRequired().HasMaxLength(30);
+            builder.Entity<DeviceStatusType>().HasOne<DeviceStatus>(devstatustype => devstatustype.DeviceStatus).WithOne(devstatus => devstatus.DeviceStatusType)
+                .HasForeignKey<DeviceStatus>(devstatus => devstatus.DeviceStatusTypeId);
         }
 
         public static void SeedDeviceStatusTypes(this ModelBuilder builder)
         {
             builder.Entity<DeviceStatusType>().HasData
             (
-                new DeviceStatusType { Id = 100, Name = "Device Online" },
-                new DeviceStatusType { Id = 101, Name = "Device Offline" }
+                new DeviceStatusType 
+                { 
+                    Id = 100, 
+                    DeviceStatusTypeName=EDeviceStatusTypeNames.DeviceOnline 
+                },
+                new DeviceStatusType 
+                { 
+                    Id = 101, 
+                    DeviceStatusTypeName=EDeviceStatusTypeNames.DeviceOffline
+                }
             );
         }
     }

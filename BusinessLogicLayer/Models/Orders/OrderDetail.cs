@@ -18,6 +18,6 @@ namespace BusinessLogicLayer.Models.Orders
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
         public OrderStatus OrderStatus { get; set; }
-        IList<Notification> Notifications { get; set; }
+        public IList<Notification> Notifications { get; set; }
     }
 }

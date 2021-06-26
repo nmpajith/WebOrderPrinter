@@ -10,6 +10,7 @@ namespace BusinessLogicLayer.Models.Orders
     {
         public int Id { get; set; }
         public int OrderStatusTypeId { get; set; }
+        public int OrderDetailId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public OrderStatusType OrderStatusType { get; set; }

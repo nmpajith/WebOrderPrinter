@@ -9,6 +9,7 @@ namespace BusinessLogicLayer.Models.Devices
     public class DeviceStatusType
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public EDeviceStatusTypeNames DeviceStatusTypeName { get; set; }
+        public DeviceStatus DeviceStatus { get; set; }
     }
 }

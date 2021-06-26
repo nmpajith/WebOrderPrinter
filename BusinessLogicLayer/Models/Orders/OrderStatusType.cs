@@ -9,6 +9,8 @@ namespace BusinessLogicLayer.Models.Orders
     public class OrderStatusType
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public EOrderStatusTypeNames OrderStatusTypeName { get; set; }
+        public string Message { get; set; }
+        public OrderStatus OrderStatus { get; set; }
     }
 }

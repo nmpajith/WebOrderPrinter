@@ -10,10 +10,10 @@ namespace BusinessLogicLayer.Models.Devices
     {
         public int Id { get; set; }
         public int DeviceStatusTypeId { get; set; }
-        public int DeviceDetailTypeId { get; set; }
+        public int DeviceDetailId { get; set; }
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
-        public DeviceDetail DeviceDetails { get; set; }
-        public DeviceStatusType DeviceStatusTypes { get; set; }
+        public DeviceDetail DeviceDetail { get; set; }
+        public DeviceStatusType DeviceStatusType { get; set; }
     }
 }

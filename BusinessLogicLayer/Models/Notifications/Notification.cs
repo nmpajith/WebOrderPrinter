@@ -14,11 +14,13 @@ namespace BusinessLogicLayer.Models.Notifications
         public int Id { get; set; }
         public int NotificationTypeId { get; set; }
         public int BranchId { get; set; }
-        public int DeviceId { get; set; }
-        public int OrderId { get; set; }
+        public int DeviceDetailId { get; set; }
+        public int OrderDetailId { get; set; }
+        public NotificationType NotificationType { get; set; }
         public DateTime DateCreated { get; set; }
+        public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
         public OrderDetail OrderDetail { get; set; } 
-        public DeviceDetail DeviceDetail { get; set; }
+        public DeviceDetail DeviceDetail { get; set; }        
     }
 }

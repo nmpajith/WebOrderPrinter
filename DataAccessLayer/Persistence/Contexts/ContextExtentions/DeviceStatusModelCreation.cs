@@ -16,11 +16,11 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceStatus>().HasKey(devstatus => devstatus.Id);
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusTypeId).IsRequired();
-            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetailTypeId).IsRequired();
+            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetailId).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateCreated).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateModified).IsRequired(); 
-            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetails).IsRequired();
-            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusTypes).IsRequired();
+            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetail).IsRequired();
+            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusType).IsRequired();
            
         }
 
@@ -28,8 +28,22 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
         {
             builder.Entity<DeviceStatus>().HasData
             (
-                new DeviceStatus { Id = 100, DeviceStatusTypeId = 101, DeviceDetailTypeId = 101, DateCreated = DateTime.Parse("20210516"), DateModified = DateTime.Parse("20210616") },
-                new DeviceStatus { Id = 101, DeviceStatusTypeId = 102, DeviceDetailTypeId = 102, DateCreated = DateTime.Parse("20210517"), DateModified = DateTime.Parse("20210617") }
+                new DeviceStatus 
+                { 
+                    Id = 100, 
+                    DeviceStatusTypeId = 100, 
+                    DeviceDetailId = 100, 
+                    DateCreated = DateTime.Parse("20210516"), 
+                    DateModified = DateTime.Parse("20210616") 
+                },
+                new DeviceStatus 
+                { 
+                    Id = 101, 
+                    DeviceStatusTypeId = 101, 
+                    DeviceDetailId = 101, 
+                    DateCreated = DateTime.Parse("20210517"), 
+                    DateModified = DateTime.Parse("20210617") 
+                }
             );
         }
     }
