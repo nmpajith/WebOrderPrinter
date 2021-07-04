@@ -1,12 +1,12 @@
-﻿using BusinessLogicLayer.Models.Notifications;
-using BusinessLogicLayer.Models.Restaurants;
+﻿using Infrastructure.Models.Restaurant;
+using Infrastructure.Models.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Devices
+namespace Infrastructure.Models.Device
 {
     public class DeviceDetail
     {
@@ -17,6 +17,6 @@ namespace BusinessLogicLayer.Models.Devices
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
         public DeviceStatus DeviceStatus { get; set; }
-        public IList <Notification> Notifications { get; set; }
+        public IList<Notification> Notifications { get; set; }
     }
 }

@@ -1,12 +1,12 @@
-﻿using BusinessLogicLayer.Models.Devices;
-using BusinessLogicLayer.Models.Notifications;
+﻿using Infrastructure.Models.Device;
+using Infrastructure.Models.Notifications;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Restaurants
+namespace Infrastructure.Models.Restaurant
 {
     public class Branch
     {

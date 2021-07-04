@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer.Models.Orders;
+﻿using Infrastructure.Models.Order;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

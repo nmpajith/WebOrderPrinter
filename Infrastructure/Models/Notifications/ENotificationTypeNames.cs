@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Devices
+namespace Infrastructure.Models.Notifications
 {
-    public enum EDeviceStatusTypeNames
+    public enum ENotificationTypeNames
     {
         DeviceOffline = 1,
-        DeviceOnline = 2
+        OrderValidationFailed = 2,
+        PrintingFailed = 3
     }
 }

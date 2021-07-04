@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer.Models.Notifications;
+﻿using Infrastructure.Models.Notifications;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

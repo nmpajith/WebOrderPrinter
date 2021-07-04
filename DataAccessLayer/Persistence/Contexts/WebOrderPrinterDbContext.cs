@@ -1,8 +1,8 @@
-﻿using BusinessLogicLayer.Models.Devices;
-using BusinessLogicLayer.Models.Notifications;
-using BusinessLogicLayer.Models.Orders;
-using BusinessLogicLayer.Models.Restaurants;
-using DataAccessLayer.Persistence.Contexts.ContextExtentions;
+﻿using DataAccessLayer.Persistence.Contexts.ContextExtentions;
+using Infrastructure.Models.Device;
+using Infrastructure.Models.Notifications;
+using Infrastructure.Models.Order;
+using Infrastructure.Models.Restaurant;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

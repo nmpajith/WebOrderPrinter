@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Devices
+namespace Infrastructure.Models.Device
 {
     public class DeviceStatusType
     {

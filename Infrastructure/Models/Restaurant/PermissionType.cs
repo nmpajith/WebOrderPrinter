@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Restaurants
+namespace Infrastructure.Models.Restaurant
 {
     public class PermissionType
     {

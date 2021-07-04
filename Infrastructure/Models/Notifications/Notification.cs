@@ -1,13 +1,13 @@
-﻿using BusinessLogicLayer.Models.Devices;
-using BusinessLogicLayer.Models.Orders;
-using BusinessLogicLayer.Models.Restaurants;
+﻿using Infrastructure.Models.Device;
+using Infrastructure.Models.Order;
+using Infrastructure.Models.Restaurant;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BusinessLogicLayer.Models.Notifications
+namespace Infrastructure.Models.Notifications
 {
     public class Notification
     {
@@ -20,7 +20,7 @@ namespace BusinessLogicLayer.Models.Notifications
         public DateTime DateCreated { get; set; }
         public DateTime DateModified { get; set; }
         public Branch Branch { get; set; }
-        public OrderDetail OrderDetail { get; set; } 
-        public DeviceDetail DeviceDetail { get; set; }        
+        public OrderDetail OrderDetail { get; set; }
+        public DeviceDetail DeviceDetail { get; set; }
     }
 }

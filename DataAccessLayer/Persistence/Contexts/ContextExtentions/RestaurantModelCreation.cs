@@ -1,4 +1,4 @@
-﻿using BusinessLogicLayer.Models.Restaurants;
+﻿using Infrastructure.Models.Restaurant;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

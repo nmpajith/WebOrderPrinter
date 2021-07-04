@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebOrderPrinter", "WebOrderPrinter\WebOrderPrinter.csproj", "{9CD73987-9417-4B6D-9962-3FF5131F6E9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebOrderPrinter", "WebOrderPrinter\WebOrderPrinter.csproj", "{9CD73987-9417-4B6D-9962-3FF5131F6E9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8F3D0F4E-B3D9-4331-A4AA-80BA75C88088}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{8F3D0F4E-B3D9-4331-A4AA-80BA75C88088}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{23D16BD4-2309-428A-9CB2-1696232DE9E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BusinessLogicLayer", "BusinessLogicLayer\BusinessLogicLayer.csproj", "{23D16BD4-2309-428A-9CB2-1696232DE9E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{056B07F7-3B88-4E82-A2A7-2AD2250040A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{23D16BD4-2309-428A-9CB2-1696232DE9E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23D16BD4-2309-428A-9CB2-1696232DE9E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23D16BD4-2309-428A-9CB2-1696232DE9E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{056B07F7-3B88-4E82-A2A7-2AD2250040A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{056B07F7-3B88-4E82-A2A7-2AD2250040A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{056B07F7-3B88-4E82-A2A7-2AD2250040A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{056B07F7-3B88-4E82-A2A7-2AD2250040A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
