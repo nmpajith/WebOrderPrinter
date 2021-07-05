@@ -36,16 +36,16 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 {
                     Id = 100,
                     Name = "The Chill Restaurant",
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     RestaurantId = 100
                 },
                 new Branch
                 {
                     Id = 101,
                     Name = "Trimo Chinese Restaurant",
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     RestaurantId = 101
                 }
             );

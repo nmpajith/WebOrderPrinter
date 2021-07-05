@@ -26,8 +26,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new Notification
                 {
                     Id = 100,
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     NotificationTypeId = 100,
                     DeviceDetailId=100,
                     OrderDetailId=100,
@@ -36,8 +36,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new Notification
                 {
                     Id = 101,
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     NotificationTypeId = 101,
                     DeviceDetailId = 101,
                     OrderDetailId = 101,

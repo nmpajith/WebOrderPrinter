@@ -38,8 +38,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                     MiddleName = "MiddleNameABC",
                     Email = "abc@abc.com",
                     PhoneNumber = "1236549872",
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     BranchId = 100
                 },
                 new Contact
@@ -50,8 +50,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                     MiddleName = "MiddleNamePQR",
                     Email = "pqr@pqr.com",
                     PhoneNumber = "5436549872",
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     BranchId = 101
                 }
             );

@@ -19,7 +19,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<NotificationType>().Property(nt => nt.NotificationTypeName).HasConversion<string>().HasColumnName("NotificationType")
                 .IsRequired().HasMaxLength(30);
             builder.Entity<NotificationType>().HasOne<Notification>(nt => nt.Notification).WithOne(n => n.NotificationType)
-                .HasForeignKey<Notification>(n => n.NotificationTypeId);
+                .HasForeignKey<Notification>(n => n.NotificationTypeId).OnDelete(DeleteBehavior.NoAction);
         }
 
         public static void SeedNotificationTypes(this ModelBuilder builder)

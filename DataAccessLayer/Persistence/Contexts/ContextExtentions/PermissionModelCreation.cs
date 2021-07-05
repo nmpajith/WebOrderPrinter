@@ -26,16 +26,16 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new Permission
                 {
                     Id = 100,
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     ContactId = 100,
                     PermissionTypeId = 100
                 },
                 new Permission
                 {
                     Id = 101,
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     PermissionTypeId = 101,
                     ContactId = 101
                 }
