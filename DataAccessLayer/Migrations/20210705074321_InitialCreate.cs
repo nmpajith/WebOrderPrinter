@@ -278,8 +278,7 @@ namespace DataAccessLayer.Migrations
                         name: "FK_Notifications_DeviceDetails_DeviceDetailId",
                         column: x => x.DeviceDetailId,
                         principalTable: "DeviceDetails",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Notifications_NotificationTypes_NotificationTypeId",
                         column: x => x.NotificationTypeId,

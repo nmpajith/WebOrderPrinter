@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DataAccessLayer.Migrations
 {
     [DbContext(typeof(WebOrderPrinterDbContext))]
-    [Migration("20210705071816_InitialCreate")]
+    [Migration("20210705074321_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -775,7 +775,7 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Infrastructure.Models.Device.DeviceDetail", "DeviceDetail")
                         .WithMany("Notifications")
                         .HasForeignKey("DeviceDetailId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Infrastructure.Models.Notifications.NotificationType", "NotificationType")

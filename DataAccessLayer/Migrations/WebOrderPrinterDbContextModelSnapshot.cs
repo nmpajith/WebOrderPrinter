@@ -773,7 +773,7 @@ namespace DataAccessLayer.Migrations
                     b.HasOne("Infrastructure.Models.Device.DeviceDetail", "DeviceDetail")
                         .WithMany("Notifications")
                         .HasForeignKey("DeviceDetailId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("Infrastructure.Models.Notifications.NotificationType", "NotificationType")

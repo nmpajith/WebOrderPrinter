@@ -19,11 +19,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.BranchId).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateCreated).IsRequired();
             builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DateModified).IsRequired();
-            //builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Branch).IsRequired();
-           // builder.Entity<DeviceDetail>().Property(devdetail => devdetail.DeviceStatus).IsRequired();
-           // builder.Entity<DeviceDetail>().Property(devdetail => devdetail.Notifications).IsRequired();
             builder.Entity<DeviceDetail>().HasMany(devdetail => devdetail.Notifications).WithOne(notification => notification.DeviceDetail)
-                .HasForeignKey(notification => notification.DeviceDetailId);
+                .HasForeignKey(notification => notification.DeviceDetailId).OnDelete(DeleteBehavior.NoAction);
             builder.Entity<DeviceDetail>().HasOne<DeviceStatus>(devdetail => devdetail.DeviceStatus).WithOne(devstatus => devstatus.DeviceDetail)
                 .HasForeignKey<DeviceStatus>(devstatus => devstatus.DeviceDetailId);
 

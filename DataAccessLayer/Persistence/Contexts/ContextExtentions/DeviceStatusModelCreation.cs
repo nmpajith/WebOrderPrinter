@@ -19,8 +19,6 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetailId).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateCreated).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateModified).IsRequired(); 
-            //builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetail).IsRequired();
-            //builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusType).IsRequired();
            
         }
 
