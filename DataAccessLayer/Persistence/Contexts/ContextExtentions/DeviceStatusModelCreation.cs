@@ -19,8 +19,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetailId).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateCreated).IsRequired();
             builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DateModified).IsRequired(); 
-            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetail).IsRequired();
-            builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusType).IsRequired();
+            //builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceDetail).IsRequired();
+            //builder.Entity<DeviceStatus>().Property(devstatus => devstatus.DeviceStatusType).IsRequired();
            
         }
 
@@ -33,16 +33,16 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                     Id = 100, 
                     DeviceStatusTypeId = 100, 
                     DeviceDetailId = 100, 
-                    DateCreated = DateTime.Parse("20210516"), 
-                    DateModified = DateTime.Parse("20210616") 
+                    DateCreated = DateTime.Parse("2021-05-16"), 
+                    DateModified = DateTime.Parse("2021-06-16") 
                 },
                 new DeviceStatus 
                 { 
                     Id = 101, 
                     DeviceStatusTypeId = 101, 
                     DeviceDetailId = 101, 
-                    DateCreated = DateTime.Parse("20210517"), 
-                    DateModified = DateTime.Parse("20210617") 
+                    DateCreated = DateTime.Parse("2021-05-17"), 
+                    DateModified = DateTime.Parse("2021-06-17") 
                 }
             );
         }

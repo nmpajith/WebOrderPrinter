@@ -20,7 +20,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
             builder.Entity<OrderDetail>().Property(order => order.DateCreated).IsRequired();
             builder.Entity<OrderDetail>().Property(order => order.DateModified).IsRequired();
             builder.Entity<OrderDetail>().HasMany(order => order.Notifications).WithOne(notification => notification.OrderDetail)
-                .HasForeignKey(notification => notification.OrderDetailId);
+                .HasForeignKey(notification => notification.OrderDetailId).OnDelete(DeleteBehavior.NoAction); ;
             builder.Entity<OrderDetail>().HasOne<OrderStatus>(order => order.OrderStatus).WithOne(os => os.OrderDetail)
                 .HasForeignKey<OrderStatus>(os => os.OrderDetailId);
         }
@@ -33,16 +33,16 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 {
                     Id = 100,
                     CustomerOrderId = "1050",
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     Order = "Item1, Item2, Item3, Item4"
                 },
                 new OrderDetail
                 {
                     Id = 101,
                     CustomerOrderId = "1051",
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     Order = "Item5,Item6,Item7,Item8"
                 }
             );

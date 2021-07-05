@@ -1,4 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using DataAccessLayer.Persistence.Contexts;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,8 +16,10 @@ namespace Root
     {
         public CompositionRoot() { }
 
-        public static void RegisterDependencies(IServiceCollection services)
+        public static void RegisterDependencies(IServiceCollection services, IConfiguration Configuration)
         {
+            services.AddDbContext<WebOrderPrinterDbContext>
+                (options => options.UseSqlServer(Configuration.GetConnectionString(nameof(WebOrderPrinterDbContext))));
         }
     }
 }

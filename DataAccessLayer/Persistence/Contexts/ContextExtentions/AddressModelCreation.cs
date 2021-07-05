@@ -38,8 +38,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                     State="State abc",
                     Zipcode="19955",
                     PhoneNumber="1236549872",
-                    DateCreated = DateTime.Parse("20210516"),
-                    DateModified = DateTime.Parse("20210516"),
+                    DateCreated = DateTime.Parse("2021-05-16"),
+                    DateModified = DateTime.Parse("2021-05-16"),
                     BranchId = 100
                 },
                 new Address
@@ -51,8 +51,8 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                     State = "State pqr",
                     Zipcode = "14587",
                     PhoneNumber = "5436549872",
-                    DateCreated = DateTime.Parse("20210616"),
-                    DateModified = DateTime.Parse("20210616"),
+                    DateCreated = DateTime.Parse("2021-06-16"),
+                    DateModified = DateTime.Parse("2021-06-16"),
                     BranchId = 101
                 }
             );
