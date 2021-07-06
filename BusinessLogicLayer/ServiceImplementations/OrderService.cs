@@ -4,6 +4,7 @@ using DataAccessLayer.Repositories;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Infrastructure.Models.Order;
 
 namespace BusinessLogicLayer.ServiceImplementations
 {
@@ -11,12 +12,12 @@ namespace BusinessLogicLayer.ServiceImplementations
     {
         private readonly IUnitOfWork _unitOfWork;
 
-        public OrderService(IUnitOfWork _unitOfWork)
+        public OrderService(IUnitOfWork unitOfWork)
         {
-            unitOfWork = unitOfWork;
+            _unitOfWork = unitOfWork;
         }
 
-        public IEnumerable<Category> GetAllOrders()
+        public IEnumerable<OrderDetail> GetAllOrders()
         {
             return _unitOfWork.OrderDetails.Get();
         }
