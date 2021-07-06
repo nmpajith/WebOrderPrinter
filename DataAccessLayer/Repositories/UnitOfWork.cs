@@ -26,20 +26,15 @@ namespace DataAccessLayer.Repositories
             _dbContext = dbContext;
         }
 
-        public IRepository<DeviceDetail> DeviceDetails => _deviceDetails ??
-            (_deviceDetails = new BaseRepository<DeviceDetail>(_dbContext));
+        public IRepository<DeviceDetail> DeviceDetails => _deviceDetails ??= new BaseRepository<DeviceDetail>(_dbContext);
 
-        public IRepository<OrderDetail> OrderDetails => _orderDetails ??
-            (_orderDetails = new BaseRepository<OrderDetail>(_dbContext));
+        public IRepository<OrderDetail> OrderDetails => _orderDetails ??= new BaseRepository<OrderDetail>(_dbContext);
 
-        public IRepository<Restaurant> Restaurants => _restaurants ??
-            (_restaurants = new BaseRepository<Restaurant>(_dbContext));
+        public IRepository<Restaurant> Restaurants => _restaurants ??= new BaseRepository<Restaurant>(_dbContext);
 
-        public IRepository<Branch> Branches => _branches ??
-            (_branches = new BaseRepository<Branch>(_dbContext));
+        public IRepository<Branch> Branches => _branches ??= new BaseRepository<Branch>(_dbContext);
 
-        public IRepository<Notification> Notifications => _notifications ??
-            (_notifications = new BaseRepository<Notification>(_dbContext));
+        public IRepository<Notification> Notifications => _notifications ??= new BaseRepository<Notification>(_dbContext);
 
         public void Commit()
         {

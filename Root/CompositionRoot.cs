@@ -2,6 +2,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using DataAccessLayer.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
+using DataAccessLayer.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace Root
         {
             services.AddDbContext<WebOrderPrinterDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString(nameof(WebOrderPrinterDbContext))));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
         }
     }
 }
