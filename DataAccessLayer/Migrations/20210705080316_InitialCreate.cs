@@ -339,26 +339,17 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.InsertData(
-                table: "OrderDetails",
-                columns: new[] { "Id", "BranchId", "CustomerOrderId", "DateCreated", "DateModified", "Order" },
-                values: new object[,]
-                {
-                    { 100, 0, "1050", new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Item1, Item2, Item3, Item4" },
-                    { 101, 0, "1051", new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Item5,Item6,Item7,Item8" }
-                });
-
-            migrationBuilder.InsertData(
                 table: "OrderStatusTypes",
                 columns: new[] { "Id", "Message", "OrderStatusType" },
                 values: new object[,]
                 {
-                    { 106, "Order sent to the device", "SentToDevice" },
-                    { 105, "Failed to print the order", "PrintingFailed" },
-                    { 104, "Order printed successfully", "PrintedSuccessfully" },
+                    { 100, "Failed To Validate Order", "OrderValidationFailed" },
                     { 101, "Order is recived by the device", "ReceivedByTheDevice" },
                     { 102, "Device is found offline", "DeviceOffline" },
-                    { 100, "Failed To Validate Order", "OrderValidationFailed" },
-                    { 103, "Order validated successfully", "OrderValidated" }
+                    { 103, "Order validated successfully", "OrderValidated" },
+                    { 104, "Order printed successfully", "PrintedSuccessfully" },
+                    { 105, "Failed to print the order", "PrintingFailed" },
+                    { 106, "Order sent to the device", "SentToDevice" }
                 });
 
             migrationBuilder.InsertData(
@@ -382,20 +373,12 @@ namespace DataAccessLayer.Migrations
             migrationBuilder.InsertData(
                 table: "Branches",
                 columns: new[] { "Id", "DateCreated", "DateModified", "Name", "RestaurantId" },
-                values: new object[,]
-                {
-                    { 100, new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "The Chill Restaurant", 100 },
-                    { 101, new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Trimo Chinese Restaurant", 101 }
-                });
+                values: new object[] { 100, new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "The Chill Restaurant", 100 });
 
             migrationBuilder.InsertData(
-                table: "OrderStatuses",
-                columns: new[] { "Id", "DateCreated", "DateModified", "OrderDetailId", "OrderStatusTypeId" },
-                values: new object[,]
-                {
-                    { 100, new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, 100 },
-                    { 101, new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 0, 101 }
-                });
+                table: "Branches",
+                columns: new[] { "Id", "DateCreated", "DateModified", "Name", "RestaurantId" },
+                values: new object[] { 101, new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Trimo Chinese Restaurant", 101 });
 
             migrationBuilder.InsertData(
                 table: "Addresses",
@@ -425,6 +408,15 @@ namespace DataAccessLayer.Migrations
                 });
 
             migrationBuilder.InsertData(
+                table: "OrderDetails",
+                columns: new[] { "Id", "BranchId", "CustomerOrderId", "DateCreated", "DateModified", "Order" },
+                values: new object[,]
+                {
+                    { 100, 100, "1050", new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Item1, Item2, Item3, Item4" },
+                    { 101, 101, "1051", new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), "Item5,Item6,Item7,Item8" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "DeviceStatuses",
                 columns: new[] { "Id", "DateCreated", "DateModified", "DeviceDetailId", "DeviceStatusTypeId" },
                 values: new object[,]
@@ -440,6 +432,15 @@ namespace DataAccessLayer.Migrations
                 {
                     { 100, 100, new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 100, 100, 100 },
                     { 101, 101, new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 101, 101, 101 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "OrderStatuses",
+                columns: new[] { "Id", "DateCreated", "DateModified", "OrderDetailId", "OrderStatusTypeId" },
+                values: new object[,]
+                {
+                    { 100, new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 100, 100 },
+                    { 101, new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified), 101, 101 }
                 });
 
             migrationBuilder.InsertData(
