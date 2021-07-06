@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BusinessLogicLayer.ServiceImplementations;
+using BusinessLogicLayer.ServiceContracts;
 
 namespace Root
 {
@@ -21,7 +22,7 @@ namespace Root
             services.AddDbContext<WebOrderPrinterDbContext>
                 (options => options.UseSqlServer(Configuration.GetConnectionString(nameof(WebOrderPrinterDbContext))));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
-            services.AddScoped<OrderService, OrderService>();
+            services.AddScoped<IOrderService, OrderService>();
         }
     }
 }

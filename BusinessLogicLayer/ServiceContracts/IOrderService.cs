@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLogicLayer.ServiceContracts
 {
-    interface IOrderService
+    public interface IOrderService
     {
         IEnumerable<OrderDetail> GetAllOrders();
     }

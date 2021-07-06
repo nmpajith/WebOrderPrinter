@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Infrastructure.Models.Restaurant;
+using BusinessLogicLayer.ServiceContracts;
 
 namespace WebOrderPrinter.Controllers
 {
@@ -19,24 +20,24 @@ namespace WebOrderPrinter.Controllers
         };
 
         private readonly ILogger<WeatherForecastController> _logger;
-        private readonly IUnitOfWork _unitOfWork;
+        private readonly IOrderService _orderService;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IUnitOfWork unitOfWork)
+        public WeatherForecastController(ILogger<WeatherForecastController> logger, IOrderService orderService)
         {
             _logger = logger;
-            _unitOfWork = unitOfWork;
+            _orderService = orderService;
         }
 
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
-            var notifications = _unitOfWork.Notifications.Get();
-            var deviceDetails = _unitOfWork.DeviceDetails.Get();
-            var deviceDetailsid = _unitOfWork.DeviceDetails.GetByID(100);
-            var notificationsforDev = _unitOfWork.Notifications.Get(notification => notification.DeviceDetail.Id == 100);
-            var notificationsbranh = _unitOfWork.Notifications.Get(notification => notification.DeviceDetail.Id == 100, null, $"{nameof(Branch)}");
-
+            var notifications = _orderService.GetAllOrders();//.Notifications.Get();
+            /*var deviceDetails = _orderService.DeviceDetails.Get();
+            var deviceDetailsid = _orderService.DeviceDetails.GetByID(100);
+            var notificationsforDev = _orderService.Notifications.Get(notification => notification.DeviceDetail.Id == 100);
+            var notificationsbranh = _orderService.Notifications.Get(notification => notification.DeviceDetail.Id == 100, null, $"{nameof(Branch)}");
+*/
 
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast

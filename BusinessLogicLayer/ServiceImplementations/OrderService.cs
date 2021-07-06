@@ -5,10 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Infrastructure.Models.Order;
+using BusinessLogicLayer.ServiceContracts;
 
 namespace BusinessLogicLayer.ServiceImplementations
 {
-    public class OrderService
+    public class OrderService : IOrderService
     {
         private readonly IUnitOfWork _unitOfWork;
 
