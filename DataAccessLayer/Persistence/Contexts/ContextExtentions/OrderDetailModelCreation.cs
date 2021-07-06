@@ -32,6 +32,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new OrderDetail
                 {
                     Id = 100,
+                    BranchId = 100,
                     CustomerOrderId = "1050",
                     DateCreated = DateTime.Parse("2021-05-16"),
                     DateModified = DateTime.Parse("2021-05-16"),
@@ -40,6 +41,7 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new OrderDetail
                 {
                     Id = 101,
+                    BranchId = 101,
                     CustomerOrderId = "1051",
                     DateCreated = DateTime.Parse("2021-06-16"),
                     DateModified = DateTime.Parse("2021-06-16"),

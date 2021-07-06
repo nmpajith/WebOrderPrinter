@@ -283,7 +283,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 100,
-                            BranchId = 0,
+                            BranchId = 100,
                             CustomerOrderId = "1050",
                             DateCreated = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -292,7 +292,7 @@ namespace DataAccessLayer.Migrations
                         new
                         {
                             Id = 101,
-                            BranchId = 0,
+                            BranchId = 101,
                             CustomerOrderId = "1051",
                             DateCreated = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
@@ -335,7 +335,7 @@ namespace DataAccessLayer.Migrations
                             Id = 100,
                             DateCreated = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(2021, 5, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderDetailId = 0,
+                            OrderDetailId = 100,
                             OrderStatusTypeId = 100
                         },
                         new
@@ -343,7 +343,7 @@ namespace DataAccessLayer.Migrations
                             Id = 101,
                             DateCreated = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             DateModified = new DateTime(2021, 6, 16, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            OrderDetailId = 0,
+                            OrderDetailId = 101,
                             OrderStatusTypeId = 101
                         });
                 });
