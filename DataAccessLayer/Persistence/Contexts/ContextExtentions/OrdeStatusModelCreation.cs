@@ -26,7 +26,6 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new OrderStatus
                 {
                     Id = 100,
-                    OrderDetailId = 100,
                     DateCreated = DateTime.Parse("2021-05-16"),
                     DateModified = DateTime.Parse("2021-05-16"),
                     OrderStatusTypeId = 100
@@ -34,7 +33,6 @@ namespace DataAccessLayer.Persistence.Contexts.ContextExtentions
                 new OrderStatus
                 {
                     Id = 101,
-                    OrderDetailId = 101,
                     DateCreated = DateTime.Parse("2021-06-16"),
                     DateModified = DateTime.Parse("2021-06-16"),
                     OrderStatusTypeId = 101
