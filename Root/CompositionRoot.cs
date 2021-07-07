@@ -23,7 +23,7 @@ namespace Root
                 (options => options.UseSqlServer(Configuration.GetConnectionString(nameof(WebOrderPrinterDbContext))));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IOrderService, OrderService>();
-            services.AddAutoMapper(typeof(Startup));
+            
         }
     }
 }
