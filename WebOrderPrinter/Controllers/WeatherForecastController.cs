@@ -32,12 +32,7 @@ namespace WebOrderPrinter.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();
-            var notifications = _orderService.GetAllOrders();//.Notifications.Get();
-            /*var deviceDetails = _orderService.DeviceDetails.Get();
-            var deviceDetailsid = _orderService.DeviceDetails.GetByID(100);
-            var notificationsforDev = _orderService.Notifications.Get(notification => notification.DeviceDetail.Id == 100);
-            var notificationsbranh = _orderService.Notifications.Get(notification => notification.DeviceDetail.Id == 100, null, $"{nameof(Branch)}");
-*/
+            var notifications = _orderService.GetAllOrders();
 
 
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
