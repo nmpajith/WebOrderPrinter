@@ -28,6 +28,8 @@ namespace WebOrderPrinter
         public void ConfigureServices(IServiceCollection services)
         {
             CompositionRoot.RegisterDependencies(services, Configuration);
+           
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
