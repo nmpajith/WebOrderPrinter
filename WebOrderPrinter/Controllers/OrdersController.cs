@@ -19,6 +19,15 @@ namespace WebOrderPrinter.Controllers
         {
             _orderService = orderService;
         }
+
+        [HttpGet]
+        public IEnumerable<OrderDetail> GetAll()
+        {
+            var orders = _orderService.GetAllOrders();
+
+            return orders;
+        }
+
         [HttpPost]
         public IActionResult PostAsync([FromBody] OrderDetail orderDetail)
         {
