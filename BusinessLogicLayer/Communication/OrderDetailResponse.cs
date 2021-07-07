@@ -12,9 +12,9 @@ namespace BusinessLogicLayer.Communication
         /// <summary>
         /// Creates a success response.
         /// </summary>
-        /// <param name="category">Saved category.</param>
+        /// <param name="orderDetail">Saved orderDetail.</param>
         /// <returns>Response.</returns>
-        public OrderDetailResponse(OrderDetail category) : base(category)
+        public OrderDetailResponse(OrderDetail orderDetail) : base(orderDetail)
         { }
 
         /// <summary>
